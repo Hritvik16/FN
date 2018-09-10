@@ -10,23 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let apiClient = API_Client()
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us")!
-        var urlRequest = URLRequest(url: url)
-        urlRequest.addValue("85a3b8f5a6a34635a0fe1a1ff331cfb4", forHTTPHeaderField: "X-Api-Key")
+    }
+    
+    @IBAction func buttonClick(_ sender: Any) {
+        guard let textFieldText = textField.text else {
+            return
+        }
+        guard let urlRequest = apiClient.requestHelper(relativePath: "everything", parameters: nil) else {
+            return
+        }
         var text = ""
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard let data = data
                 else {
-                return
+                    return
             }
-//                let decoder = JSONDecoder()
-//                let info = try? decoder.decode(params.self, from: data)
+            //                let decoder = JSONDecoder()
+            //                let info = try? decoder.decode(params.self, from: data)
             let jsonObject = try? JSONSerialization.jsonObject(with: data, options: [])
             guard let jsonDict = jsonObject as? [String : Any] else {
-                    return
+                return
             }
             guard let articles = jsonDict["articles"] as? [Any] else {
                 return
@@ -39,10 +48,8 @@ class ViewController: UIViewController {
                 
             }
             DispatchQueue.main.async {
-                self.textField.text = description
+                self.label.text = description
             }
-        }.resume()
+            }.resume()
     }
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }

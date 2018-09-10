@@ -15,6 +15,7 @@
 		4F128A3F21403A7D00739429 /* Fake_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F128A3E21403A7D00739429 /* Fake_NewsTests.swift */; };
 		4F128A4A21403A7D00739429 /* Fake_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F128A4921403A7D00739429 /* Fake_NewsUITests.swift */; };
 		4FC75E982146D1AA0014B690 /* API_Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E972146D1A90014B690 /* API_Client.swift */; };
+		4FC75E9A2146D6000014B690 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E992146D6000014B690 /* URLManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4F128A4921403A7D00739429 /* Fake_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fake_NewsUITests.swift; sourceTree = "<group>"; };
 		4F128A4B21403A7D00739429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FC75E972146D1A90014B690 /* API_Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Client.swift; sourceTree = "<group>"; };
+		4FC75E992146D6000014B690 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				4F128A2921403A7900739429 /* AppDelegate.swift */,
 				4F128A2B21403A7900739429 /* ViewController.swift */,
 				4FC75E972146D1A90014B690 /* API_Client.swift */,
+				4FC75E992146D6000014B690 /* URLManager.swift */,
 				4F128A2D21403A7900739429 /* Main.storyboard */,
 				4F128A3021403A7D00739429 /* Assets.xcassets */,
 				4F128A3221403A7D00739429 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F128A2C21403A7900739429 /* ViewController.swift in Sources */,
+				4FC75E9A2146D6000014B690 /* URLManager.swift in Sources */,
 				4FC75E982146D1AA0014B690 /* API_Client.swift in Sources */,
 				4F128A2A21403A7900739429 /* AppDelegate.swift in Sources */,
 			);

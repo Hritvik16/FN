@@ -8,10 +8,9 @@
 
 import Foundation
 class API_Client {
-    var url = URL(string: "https://newsapi.org/v2/top-headlines?country=us")!
     
-    func requestHelper(relativePath: String) -> URLRequest? {
-        guard let url = URL(string: "https://newsapi.org/v2/\(relativePath)") else {
+    func requestHelper(relativePath: String, parameters : [String : String]?) -> URLRequest? {
+        guard let url = URLManager.urlMaker(relativePath: relativePath, parameters: parameters) else {
             return nil
         }
         var urlRequest = URLRequest(url: url)
@@ -19,12 +18,12 @@ class API_Client {
         return urlRequest
     }
     func topHeadlines() {
-        let urlRequest = requestHelper(relativePath: "top-headlines")
+        let urlRequest = requestHelper(relativePath: "top-headlines", parameters: nil)
     }
     func everything() {
-        let urlRequest = requestHelper(relativePath: "everything")
+        let urlRequest = requestHelper(relativePath: "everything", parameters: nil)
     }
     func sources() {
-        let urlRequest = requestHelper(relativePath: "sources")
+        let urlRequest = requestHelper(relativePath: "sources", parameters: nil)
     }
 }
