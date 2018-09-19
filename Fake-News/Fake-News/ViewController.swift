@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let apiClient = API_Client()
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,34 +23,25 @@ class ViewController: UIViewController {
         guard let textFieldText = textField.text else {
             return
         }
-        guard let urlRequest = apiClient.requestHelper(relativePath: "everything", parameters: nil) else {
-            return
+        let articleManager = ArticleManager(parameters: ["q" : textFieldText])
+        var articleList = articleManager.getTopHeadLines()
+        while articleList.isEmpty {
+            articleList = articleManager.getTopHeadLines()
         }
-        var text = ""
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard let data = data
-                else {
+        
+        if let description = articleList[0].description {
+            label.text = description
+        }
+        
+        if let imageURL = articleList[0].image {
+            URLSession.shared.dataTask(with: imageURL) { data, response, error in
+                guard let data = data, let image = UIImage(data: data) else {
                     return
-            }
-            //                let decoder = JSONDecoder()
-            //                let info = try? decoder.decode(params.self, from: data)
-            let jsonObject = try? JSONSerialization.jsonObject(with: data, options: [])
-            guard let jsonDict = jsonObject as? [String : Any] else {
-                return
-            }
-            guard let articles = jsonDict["articles"] as? [Any] else {
-                return
-            }
-            guard let articleInfo = articles[0] as? [String : Any] else {
-                return
-            }
-            guard let description = articleInfo["description"] as? String else {
-                return
-                
-            }
-            DispatchQueue.main.async {
-                self.label.text = description
-            }
+                }
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
             }.resume()
+        }        
     }
 }
