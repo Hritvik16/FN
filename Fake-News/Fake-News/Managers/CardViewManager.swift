@@ -1,0 +1,29 @@
+//
+//  CardViewManager.swift
+//  Fake-News
+//
+//  Created by Hritvik JV on 11/10/18.
+//  Copyright © 2018 Hritvik JV. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class CardViewManager {
+    var cardViews: [CardView] = []
+    init() {
+        let articleManager = ArticleManager(parameters: ["q" : "us"])
+        let topHeadlines = articleManager.getTopHeadLines()
+        for article in topHeadlines {
+            var i = 0
+            let cardView = CardView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
+            cardView.setup(article: article)
+            cardViews.append(cardView)
+                //CardView(article: article, frame: CGRect(x: 0, y: 0, width: 375, height: 667)))
+            i += 1
+        }
+    }
+    func initializeCardViews() -> CardView{
+        return cardViews[0];
+    }
+}
