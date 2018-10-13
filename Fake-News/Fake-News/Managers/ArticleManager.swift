@@ -53,7 +53,15 @@ class ArticleManager: articleManager {
     func getTopHeadLines() -> [Article] {
         return topHeadlines
     }
+    
     func getEverything() -> [Article] {
         return everything
+    }
+    
+    func nextArticle() -> Article {
+        while topHeadlines.isEmpty {
+            //TODO
+        }
+        return topHeadlines[0]
     }
 }

@@ -13,7 +13,13 @@ class CardViewManager {
     var cardViews: [CardView] = []
     init() {
         let articleManager = ArticleManager(parameters: ["q" : "us"])
+        
+        while articleManager.getTopHeadLines().isEmpty {
+            //do stuff
+        }
+        
         let topHeadlines = articleManager.getTopHeadLines()
+        
         for article in topHeadlines {
             var i = 0
             let cardView = CardView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
@@ -23,7 +29,9 @@ class CardViewManager {
             i += 1
         }
     }
-    func initializeCardViews() -> CardView{
+    func initializeCardViews() -> CardView {
+        while cardViews.isEmpty {
+        }
         return cardViews[0];
     }
 }

@@ -8,5 +8,7 @@
 
 import Foundation
 protocol NewsCardManagersProtocol {
-    
+    func getNextCard() -> ArticleItem {
+    <#function body#>
+    }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F094D57216FDD320044D186 /* CardViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094D56216FDD320044D186 /* CardViewManager.swift */; };
+		4F094D5921704A260044D186 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F094D5821704A260044D186 /* CardView.xib */; };
+		4F094D5B21704ABF0044D186 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094D5A21704ABF0044D186 /* CardView.swift */; };
 		4F128A2A21403A7900739429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F128A2921403A7900739429 /* AppDelegate.swift */; };
 		4F128A2C21403A7900739429 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F128A2B21403A7900739429 /* ViewController.swift */; };
 		4F128A2F21403A7900739429 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F128A2D21403A7900739429 /* Main.storyboard */; };
@@ -16,9 +19,7 @@
 		4F128A4A21403A7D00739429 /* Fake_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F128A4921403A7D00739429 /* Fake_NewsUITests.swift */; };
 		4FC75E982146D1AA0014B690 /* API_Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E972146D1A90014B690 /* API_Client.swift */; };
 		4FC75E9A2146D6000014B690 /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E992146D6000014B690 /* URLManager.swift */; };
-		4FC75E9C2147323F0014B690 /* NewsCardManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E9B2147323F0014B690 /* NewsCardManagers.swift */; };
-		4FC75E9E214732D30014B690 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E9D214732D30014B690 /* NewsItem.swift */; };
-		4FC75EA0214733DE0014B690 /* ArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E9F214733DE0014B690 /* ArticleItem.swift */; };
+		4FC75EA0214733DE0014B690 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75E9F214733DE0014B690 /* Article.swift */; };
 		4FC75EA221473DBD0014B690 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC75EA121473DBD0014B690 /* ArticleManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F094D56216FDD320044D186 /* CardViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewManager.swift; sourceTree = "<group>"; };
+		4F094D5821704A260044D186 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		4F094D5A21704ABF0044D186 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4F128A2621403A7900739429 /* Fake-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fake-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F128A2921403A7900739429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F128A2B21403A7900739429 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,9 +59,7 @@
 		4F128A4B21403A7D00739429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FC75E972146D1A90014B690 /* API_Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Client.swift; sourceTree = "<group>"; };
 		4FC75E992146D6000014B690 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
-		4FC75E9B2147323F0014B690 /* NewsCardManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardManagers.swift; sourceTree = "<group>"; };
-		4FC75E9D214732D30014B690 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		4FC75E9F214733DE0014B690 /* ArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleItem.swift; sourceTree = "<group>"; };
+		4FC75E9F214733DE0014B690 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		4FC75EA121473DBD0014B690 /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F094D5C2170553B0044D186 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4FC75EA121473DBD0014B690 /* ArticleManager.swift */,
+				4F094D56216FDD320044D186 /* CardViewManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		4F128A1D21403A7900739429 = {
 			isa = PBXGroup;
 			children = (
@@ -109,18 +120,18 @@
 		4F128A2821403A7900739429 /* Fake-News */ = {
 			isa = PBXGroup;
 			children = (
+				4F094D5C2170553B0044D186 /* Managers */,
 				4F128A2921403A7900739429 /* AppDelegate.swift */,
 				4F128A2B21403A7900739429 /* ViewController.swift */,
-				4FC75E9B2147323F0014B690 /* NewsCardManagers.swift */,
 				4FC75E972146D1A90014B690 /* API_Client.swift */,
-				4FC75EA121473DBD0014B690 /* ArticleManager.swift */,
-				4FC75E9D214732D30014B690 /* NewsItem.swift */,
-				4FC75E9F214733DE0014B690 /* ArticleItem.swift */,
+				4FC75E9F214733DE0014B690 /* Article.swift */,
 				4FC75E992146D6000014B690 /* URLManager.swift */,
 				4F128A2D21403A7900739429 /* Main.storyboard */,
 				4F128A3021403A7D00739429 /* Assets.xcassets */,
 				4F128A3221403A7D00739429 /* LaunchScreen.storyboard */,
 				4F128A3521403A7D00739429 /* Info.plist */,
+				4F094D5821704A260044D186 /* CardView.xib */,
+				4F094D5A21704ABF0044D186 /* CardView.swift */,
 			);
 			path = "Fake-News";
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 			files = (
 				4F128A3421403A7D00739429 /* LaunchScreen.storyboard in Resources */,
 				4F128A3121403A7D00739429 /* Assets.xcassets in Resources */,
+				4F094D5921704A260044D186 /* CardView.xib in Resources */,
 				4F128A2F21403A7900739429 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC75EA0214733DE0014B690 /* ArticleItem.swift in Sources */,
-				4FC75E9C2147323F0014B690 /* NewsCardManagers.swift in Sources */,
-				4FC75E9E214732D30014B690 /* NewsItem.swift in Sources */,
+				4F094D57216FDD320044D186 /* CardViewManager.swift in Sources */,
+				4FC75EA0214733DE0014B690 /* Article.swift in Sources */,
 				4F128A2C21403A7900739429 /* ViewController.swift in Sources */,
 				4FC75E9A2146D6000014B690 /* URLManager.swift in Sources */,
 				4FC75E982146D1AA0014B690 /* API_Client.swift in Sources */,
 				4FC75EA221473DBD0014B690 /* ArticleManager.swift in Sources */,
+				4F094D5B21704ABF0044D186 /* CardView.swift in Sources */,
 				4F128A2A21403A7900739429 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

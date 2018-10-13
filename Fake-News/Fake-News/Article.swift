@@ -33,4 +33,29 @@ class Article {
         self.image = imageUrl
         self.publishDate = publishDate
     }
+    
+//    func getImage(dataCompletionhandler: @escaping (UIImage?) -> Void) {
+//        guard let url = url else {
+//            return
+//        }
+//        let urlRequest = URLRequest(url: url)
+//
+//        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+//            guard let data = data else {
+//                dataCompletionhandler(nil)
+//                return
+//            }
+//
+//            let image = UIImage(data: data)
+//                dataCompletionhandler(image)
+//
+//        }.resume()
+//    }
+    func getImage() {
+        
+    }
 }
+
+
+
+
