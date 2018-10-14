@@ -23,13 +23,12 @@ class CardViewManager {
         for article in topHeadlines {
             var i = 0
             let cardView = CardView(frame: CGRect(x: 0, y: 0, width: 375, height: 667))
-            cardView.setup(article: article)
             cardViews.append(cardView)
                 //CardView(article: article, frame: CGRect(x: 0, y: 0, width: 375, height: 667)))
             i += 1
         }
     }
-    func initializeCardViews() -> CardView {
+    func nextCard() -> CardView {
         while cardViews.isEmpty {
         }
         return cardViews[0];

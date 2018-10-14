@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCk-yx-WBj" customClass="CardView" customModule="Fake_News" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78614997860000002" green="1" blue="0.91787112110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cCk-yx-WBj" firstAttribute="top" secondItem="Thu-BY-emv" secondAttribute="top" id="GGw-HL-7fw"/>
+                            <constraint firstItem="cCk-yx-WBj" firstAttribute="top" secondItem="Thu-BY-emv" secondAttribute="top" constant="8" id="GGw-HL-7fw"/>
                             <constraint firstItem="Thu-BY-emv" firstAttribute="trailing" secondItem="cCk-yx-WBj" secondAttribute="trailing" constant="16" id="HV0-o1-VKi"/>
                             <constraint firstItem="Thu-BY-emv" firstAttribute="bottom" secondItem="cCk-yx-WBj" secondAttribute="bottom" constant="20" id="SlN-a7-0wu"/>
                             <constraint firstItem="cCk-yx-WBj" firstAttribute="leading" secondItem="Thu-BY-emv" secondAttribute="leading" constant="16" id="Vyx-vb-PH3"/>

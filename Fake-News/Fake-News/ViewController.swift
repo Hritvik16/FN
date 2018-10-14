@@ -19,7 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let cardViewManager = CardViewManager()
-        cardView = cardViewManager.initializeCardViews()
+        cardView = cardViewManager.nextCard()
+        cardView.cardView.alpha = 0
+        UIView.animate(withDuration: 3) {
+            cardView.cardView.alpha = 1
+        }
     }
 //    @IBAction func swipeRecognizer(_ sender: UIPanGestureRecognizer) {
 //        guard let card = sender.view else {

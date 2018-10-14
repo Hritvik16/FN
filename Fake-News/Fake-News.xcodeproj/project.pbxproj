@@ -91,6 +91,7 @@
 		4F094D5C2170553B0044D186 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4FC75E992146D6000014B690 /* URLManager.swift */,
 				4FC75EA121473DBD0014B690 /* ArticleManager.swift */,
 				4F094D56216FDD320044D186 /* CardViewManager.swift */,
 			);
@@ -125,7 +126,6 @@
 				4F128A2B21403A7900739429 /* ViewController.swift */,
 				4FC75E972146D1A90014B690 /* API_Client.swift */,
 				4FC75E9F214733DE0014B690 /* Article.swift */,
-				4FC75E992146D6000014B690 /* URLManager.swift */,
 				4F128A2D21403A7900739429 /* Main.storyboard */,
 				4F128A3021403A7D00739429 /* Assets.xcassets */,
 				4F128A3221403A7D00739429 /* LaunchScreen.storyboard */,

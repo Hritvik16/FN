@@ -14,7 +14,8 @@ class CardView: UIView {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         
@@ -22,7 +23,6 @@ class CardView: UIView {
         article = articleManager.nextArticle()
         
         super.init(coder: aDecoder)
-        
         setup(article: article)
     }
     
@@ -39,14 +39,21 @@ class CardView: UIView {
     func setup(article: Article) {
         
         Bundle.main.loadNibNamed("CardView", owner: self, options: nil)
+        
         addSubview(cardView)
+        
         cardView.frame = self.bounds
         cardView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
         if let url = article.image {
             imageView.load(url: url)
         }
-        label.text = article.description
+        descriptionLabel.text = article.description
+        titleLabel.text = article.title
+        cardView.alpha = 0
+        UIView.animate(withDuration: 1) {
+            self.cardView.alpha = 1
+        }
     }
 }
 
